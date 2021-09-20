@@ -12,6 +12,7 @@
         <input type="text" id="personalInfo" placeholder="name">
         <input type="text" id="passwordOne" placeholder="password">
         <input type="text" id="passwordTwo" placeholder="password check">
+        <h1 id="testName"></h1>
         
 
         </div>
@@ -25,6 +26,7 @@
             const inputPasswordOne = document.querySelector('.passwordOne');
             const inputPasswordTwo = document.querySelector('.passwordTwo');
             const loginDiv = document.querySelector('.loginDiv');
+            const testName = document.quesrySelector('.testName');
             let jsonObject;
 
             let requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
@@ -46,6 +48,7 @@
                 const username = document.createElement('h1');
                 username.textContent = obj['squadName'];
                 console.log(username);
+                testName.textContent = username;
                 loginDiv.appendChild(username);
             };
 
