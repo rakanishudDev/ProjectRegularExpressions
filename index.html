@@ -39,27 +39,15 @@
             request.onload = function() {
                 const serverResponseText = request.response;
                 const serverResponse = JSON.parse(serverResponseText);
-                jsonObject = serverResponse;
-                console.log(serverResponse);
-                console.log(jsonObject);
                 usernameAppend(serverResponse);
 
             };
 
             let usernameAppend = function(obj) {
-                const username = document.createElement('h1');
-                username.textContent = obj['squadName'];
-                console.log(username);
                 testName.textContent = obj['squadName'];
-                loginDiv.appendChild(username);
-            };
-            console.log(jsonObject);
-            const userNamee = document.createElement('h1');
-            userNamee.textContent = jsonObject['squadName'];
-            console.log(userNamee);
-            test2Name.textContent = userNamee;
-            loginDiv.appendChild(userNamee);
-
+                console.log(testName.textContent);
+                
+            
 
         </script>
     </body>
