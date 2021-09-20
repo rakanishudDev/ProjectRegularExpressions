@@ -36,6 +36,8 @@
                 const serverResponseText = request.response;
                 const serverResponse = JSON.parse(serverResponseText);
                 jsonObject = serverResponse;
+                console.log(serverResponse);
+                console.log(jsonObject);
                 const username = document.createElement('h1');
                 username.textContent = serverResponse['squadName'];
                 loginDiv.appendChild(username);
