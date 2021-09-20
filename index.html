@@ -29,10 +29,11 @@
             let requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
             let request = new XMLHttpRequest();
             request.open('GET', requestURL);
-            request.responseType = 'json';
+            request.responseType = 'text';
             request.send();
             request.onload = function() {
-                const serverResponse = request.response;
+                const serverResponseText = request.response;
+                const serverResponse = JSON.parse(serverResponseText);
                 const username = document.createElement('h1');
                 username.textContent = serverResponse.squadName;
                 loginDiv.appendChild(username);
