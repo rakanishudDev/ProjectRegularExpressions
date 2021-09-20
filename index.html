@@ -38,10 +38,16 @@
                 jsonObject = serverResponse;
                 console.log(serverResponse);
                 console.log(jsonObject);
+                usernameAppend(serverResponse);
+
+            };
+
+            let usernameAppend = function(obj) {
                 const username = document.createElement('h1');
-                username.textContent = serverResponse['squadName'];
+                username.textContent = obj['squadName'];
                 loginDiv.appendChild(username);
             };
+
 
 
         </script>
