@@ -25,6 +25,7 @@
             const inputPasswordOne = document.querySelector('.passwordOne');
             const inputPasswordTwo = document.querySelector('.passwordTwo');
             const loginDiv = document.querySelector('.loginDiv');
+            const jsonObject
 
             let requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
             let request = new XMLHttpRequest();
@@ -34,6 +35,7 @@
             request.onload = function() {
                 const serverResponseText = request.response;
                 const serverResponse = JSON.parse(serverResponseText);
+                jsonObject = serverResponse;
                 const username = document.createElement('h1');
                 username.textContent = serverResponse['squadName'];
                 loginDiv.appendChild(username);
