@@ -1,4 +1,5 @@
 
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -15,6 +16,7 @@
         <h1 id="testName">here</h1>
         <h1 id="test2Name">heree</h1>
         
+        
 
         </div>
         
@@ -30,6 +32,7 @@
             const testName = document.querySelector('.testName');
             const test2Name = document.querySelector('test2Name');
             let jsonObject;
+            testName.textContent = 'error';
 
             let requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
             let request = new XMLHttpRequest();
@@ -44,8 +47,10 @@
             };
 
             let usernameAppend = function(obj) {
+                console.log(obj.squadName);
+                testName.textContent = 'error';
                 testName.textContent = obj['squadName'];
-                console.log(testName.textContent);
+                console.log(obj.squadName);
             }
             
 
