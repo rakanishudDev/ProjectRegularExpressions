@@ -26,6 +26,15 @@
             const inputPasswordTwo = document.querySelector('.passwordTwo');
             const loginDiv = document.querySelector('.loginDiv');
 
+            let requestURL = 'https://raw.githubusercontent.com/rakanishudDev/ProjectRegularExpressions/main/accountInfo.json';
+            let request = new.XMLHttpRequest();
+            request.open('GET', requestURL);
+            request.onload = function() {
+                const serverResponse = request.response;
+                const username = document.createElement('h1');
+                username.textContent = serverResponse.username;
+                loginDiv.appendChild(username);
+            };
 
 
         </script>
